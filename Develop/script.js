@@ -18,7 +18,12 @@ function generatePassword() {
     alert("Please enter a number to continue");
   } else if (amount <8 || amount > 128) {
     alert("Choose a number between 8 and 128 for your password.");
-  }
+  } else {
+    confirmLower = confirm("Will this password have lowercase letters in it?");
+    confirmUpper = confirm("Will this password have uppercase letters in it?");
+    confirmNumbers = confirm("Will this password have numbers in it?");
+    confirmSpecial = confirm("Will this password have any special characters in it?");
+  };
 }
 
 
