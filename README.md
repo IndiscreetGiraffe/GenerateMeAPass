@@ -16,7 +16,7 @@
   An application to help you generate a random password using prompts given to you made with Javascript.
 
   
-  <img src = "./images/gen1.png >
+  <img src = "./images/gen1.jpg >
 
   
  
