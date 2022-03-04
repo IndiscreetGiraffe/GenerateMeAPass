@@ -25,19 +25,45 @@ function generatePassword() {
     confirmNumbers = confirm("Will this password have numbers in it?");
     confirmSpecial = confirm("Will this password have any special characters in it?");
   };
+  //one choice
   if (confirmLower) {
     choice = lower;
-  }
-  else if (confirmUpper) {
+  } else if (confirmUpper) {
     choice = upper;
-  }
-  else if (confirmNumbers) {
+  } else if (confirmNumbers) {
     choice = numbers;
-  }
-  else if (confirmSpecial) {
+  } else if (confirmSpecial) {
     choice = special;
+  } 
+  //two choices
+  else if (confirmLower && confirmUpper) {
+    choice = lower.concat(upper);
+  } else if (confirmLower && confirmNumbers) {
+    choice = lower.concat(numbers);
+  } else if (confirmLower && confirmSpecial) {
+    choice = lower.concat(special);
+  } else if (confirmUpper && confirmNumbers) {
+    choice = upper.concat(numbers);
+  } else if (confirmUpper && confirmSpecial) {
+    choice = upper.concat(special);
+  } else if (confirmNumbers && confirmSpecial) {
+    choice = numbers.concat(special);
   }
-  
+  //three choices
+  else if (confirmLower && confirmUpper && confirmNumbers) {
+    choice = lower.concat(upper, numbers);
+  } else if (confirmLower && confirmUpper && confirmSpecial) {
+    choice = lower.contact(upper, special);
+  } else if (confirmLower && confirmNumbers && confirmSpecial) {
+    choice = lower.concat(numbers, special);
+  } else if (confirmUpper && confirmNumbers && confirmSpecial) {
+    choice = upper.concat(numbers, special);
+  }
+  //all choices
+  else if (confirmLower && confirmUpper && confirmNumbers && confirmSpecial) {
+    choice = lower.concat(upper, numbers, special);
+  };
+
 }
 
 
