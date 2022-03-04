@@ -64,7 +64,15 @@ function generatePassword() {
     choice = lower.concat(upper, numbers, special);
   };
 
-}
+  var password = [];
+  for (let i=0; i < amount; i++) {
+    var randomChoice = choice[Math.floor(Math.random() * choice.length)];
+    password.push(randomChoice);
+  }
+
+  return password;
+
+};
 
 
 // Get references to the #generate element
