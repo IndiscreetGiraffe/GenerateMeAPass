@@ -4,6 +4,7 @@ var confirmUpper;
 var confirmNumbers;
 var confirmSpecial;
 var amount;
+var choice;
 //special characters and other input for password
 lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z'];
 upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z'];
@@ -24,6 +25,19 @@ function generatePassword() {
     confirmNumbers = confirm("Will this password have numbers in it?");
     confirmSpecial = confirm("Will this password have any special characters in it?");
   };
+  if (confirmLower) {
+    choice = lower;
+  }
+  else if (confirmUpper) {
+    choice = upper;
+  }
+  else if (confirmNumbers) {
+    choice = numbers;
+  }
+  else if (confirmSpecial) {
+    choice = special;
+  }
+  
 }
 
 
