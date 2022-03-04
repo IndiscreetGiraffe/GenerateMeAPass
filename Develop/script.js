@@ -3,7 +3,6 @@ var confirmLower;
 var confirmUpper;
 var confirmNumbers;
 var confirmSpecial;
-var amount;
 var choice;
 //special characters and other input for password
 lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z'];
@@ -13,7 +12,7 @@ special = ["!","@","#","$","%","^","&","*","(",")","_","+","=",";",":"];
 
 //Generate Password code
 function generatePassword() {
-  amount = prompt("How many characters are going to be in your password? Choose between 8 and 128 characters.");
+ var amount = prompt("How many characters are going to be in your password? Choose between 8 and 128 characters.");
   //first if to start user validation
   if (!amount) {
     alert("Please enter a number to continue");
@@ -72,7 +71,7 @@ function generatePassword() {
 
   return password;
 
-};
+}
 
 
 // Get references to the #generate element
